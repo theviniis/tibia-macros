@@ -25,3 +25,5 @@ $1:: {
 
 ; ================== OTHERS ================== ;
 $!^Escape:: ExitApp()
+
+$^Escape:: Suspend()

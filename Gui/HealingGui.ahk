@@ -16,15 +16,15 @@ UpdateOSD()
 
 UpdateOSD() {
    MouseGetPos &MouseX, &MouseY
-   if (User.callStack.healingPlayer) {
-      HealingDot.Opt(COLORS.%User.callStack.healingPlayer%)
+   if (App.callStack.healingPlayer) {
+      HealingDot.Opt(COLORS.%App.callStack.healingPlayer%)
    } else {
       HealingDot.Opt(COLORS.none)
    }
 }
 
 Loop {
-   if WinActive(User.client) {
+   if WinActive(App.client) {
       HealingGui.Show("x1882 y998 NoActivate")
    } else {
       HealingGui.Hide()

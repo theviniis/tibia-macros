@@ -1,4 +1,4 @@
-class Alert extends User {
+class Alert extends App {
    static send(label, timeout := 1000) {
       ToolTip(label)
       SetTimer(() => ToolTip(), timeout * -1)

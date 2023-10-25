@@ -1,10 +1,14 @@
-class User {
+class App {
    static hotkeys := {
       UH: "{F2}",
       AOE: "{F4}",
       MW: "{F17}",
       DEBUFF: "{F3}",
-      BUFF: "+{F3}"
+      BUFF: "+{F3}",
+      ammu1: "{1}",
+      ammu2: "+{1}",
+      ring1: "^{F13}",
+      ring2: "^{F14}",
    }
 
    static partyListPlayerGap := 22
@@ -22,7 +26,8 @@ class User {
 
    static cooldowns := {
       click: 0,
-      exhaust: 250
+      exhaust: 250,
+      items: 100,
    }
 
    static client := "ahk_exe client.exe"

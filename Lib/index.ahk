@@ -1,7 +1,9 @@
+#Include <App>
 #Include <env>
 #Include <Rune>
 #Include <UH>
 #Include <Alert>
 #Include <Spells>
+#Include <Item>
 #Include '../Utils/index.ahk'
 #Include '../Gui/index.ahk'

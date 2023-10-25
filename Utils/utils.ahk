@@ -3,11 +3,10 @@ sendTooltip(label, timeout := 1000) {
    SetTimer(() => ToolTip(), timeout * -1)
 }
 
-
-sendBlind(hotkey) {
+sendBlind(hotkey, cooldown := 0) {
    blind := "{Blind}" . hotkey
    SendInput(blind)
-   return blind
+   Sleep(cooldown)
 }
 
 isMouseInArea(x1, y1, x2, y2) {

@@ -1,9 +1,9 @@
 #Include <index>
 
 ; ================== RUNES ================== ;
-$F4:: Rune.send(User.hotkeys.AOE)
+$F4:: Rune.send(App.hotkeys.AOE)
 
-$F17:: Rune.send(User.hotkeys.MW)
+$F17:: Rune.send(App.hotkeys.MW)
 
 ; ================== UH ================== ;
 $^Ins:: UH.setAllPositions()
@@ -13,9 +13,15 @@ $F2:: UH.send("EK")
 $F3:: UH.send("RP")
 
 ; ================== Debuff ================== ;
-WheelDown:: Spells.debuff(User.hotkeys.DEBUFF)
+WheelDown:: Spells.debuff(App.hotkeys.DEBUFF)
 
-WheelUp:: Spells.debuff(User.hotkeys.BUFF)
+WheelUp:: Spells.debuff(App.hotkeys.BUFF)
+
+; ================== Item Toggle ================== ;
+$1:: {
+   Item.toggle("ammu")
+   Item.toggle("ring")
+}
 
 ; ================== OTHERS ================== ;
 $!^Escape:: ExitApp()

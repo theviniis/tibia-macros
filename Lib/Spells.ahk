@@ -1,4 +1,4 @@
-class Spells extends User {
+class Spells extends App {
    static send(spell) {
       sendBlind(spell)
       Sleep(this.cooldowns.exhaust)

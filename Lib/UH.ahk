@@ -1,4 +1,4 @@
-class UH extends User {
+class UH extends App {
    static send(target) {
       this.callStack.healingPlayer := target
       Rune.sendOnTarget(this.hotkeys.UH, target)

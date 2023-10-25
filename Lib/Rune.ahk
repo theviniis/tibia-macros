@@ -1,4 +1,4 @@
-class Rune extends User {
+class Rune extends App {
    static send(rune, cooldown := this.cooldowns.exhaust) {
       SendInput(rune)
       Sleep(this.cooldowns.click)

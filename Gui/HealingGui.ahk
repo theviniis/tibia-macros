@@ -1,5 +1,4 @@
 Persistent(true)
-
 COLORS := {
    EK: "c0x50BD7C",
    RP: "c0xD2D26B",
@@ -7,8 +6,8 @@ COLORS := {
 }
 
 HealingGui := Gui()
-HealingDot := HealingGui.AddProgress("w24 h24 vMyProgress", 100)
-HealingGui.Opt("+AlwaysOnTop -Caption +ToolWindow")
+HealingDot := HealingGui.AddProgress("w8 h8 vMyProgress", 100)
+HealingGui.Opt("+AlwaysOnTop -Caption +E0x8000000 +E0x20")
 HealingGui.BackColor := "000000"
 WinSetTransColor(HealingGui.BackColor " 255", HealingGui)
 SetTimer(UpdateOSD, 50)
@@ -25,7 +24,7 @@ UpdateOSD() {
 
 Loop {
    if WinActive(App.client) {
-      HealingGui.Show("x1882 y998 NoActivate")
+      HealingGui.Show("x878 y450 NoActivate")
    } else {
       HealingGui.Hide()
    }

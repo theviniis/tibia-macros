@@ -7,8 +7,8 @@ class App {
       BUFF: "+{F3}",
       ammu1: "{1}",
       ammu2: "+{1}",
-      ring1: "^{F13}",
-      ring2: "^{F14}",
+      ring1: "^{F14}",
+      ring2: "^{F13}",
    }
 
    static partyListPlayerGap := 22

@@ -1,5 +1,8 @@
-#HotIf WinActive("ahk_exe client.exe")
-TraySetIcon('./Asset/icon.png')
+#HotIf WinActive(Paths.tibia.client.process)
+iconPath := "./Asset/icon.png"
+if FileExist(iconPath) {
+   TraySetIcon(iconPath)
+}
 #SingleInstance Force
 SetWorkingDir A_ScriptDir
 A_HotkeyInterval := 99999999

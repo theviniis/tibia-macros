@@ -23,7 +23,7 @@ UpdateOSD() {
 }
 
 Loop {
-   if WinActive(App.client) {
+   if WinActive(Paths.tibia.client.process) {
       HealingGui.Show("x878 y450 NoActivate")
    } else {
       HealingGui.Hide()

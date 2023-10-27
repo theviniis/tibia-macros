@@ -1,3 +1,4 @@
+#Include "../Paths.ahk"
 #Include <App>
 #Include <env>
 #Include <Rune>

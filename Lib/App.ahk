@@ -30,8 +30,6 @@ class App {
       items: 100,
    }
 
-   static client := "ahk_exe client.exe"
-
    static callStack := {
       healingPlayer: false
    }

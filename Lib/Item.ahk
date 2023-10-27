@@ -22,10 +22,13 @@ class Item extends App {
    }
 
    static toggle(item) {
-      this.state.%item%.isActive := !this.state.%item%.isActive
-      if (this.state.%item%.isActive)
-         this.equip(this.state.%item%.hotkeys.1)
-      else
-         this.equip(this.state.%item%.hotkeys.2)
+      shouldToggleItem := this.options.toggleItems
+      if (shouldToggleItem) {
+         this.state.%item%.isActive := !this.state.%item%.isActive
+         if (this.state.%item%.isActive)
+            this.equip(this.state.%item%.hotkeys.1)
+         else
+            this.equip(this.state.%item%.hotkeys.2)
+      }
    }
 }

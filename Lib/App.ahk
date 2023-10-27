@@ -1,4 +1,11 @@
 class App {
+   static options := {
+      runScript: true,
+      showGui: false,
+      bindScroll: true,
+      toggleItems: true,
+   }
+
    static hotkeys := {
       UH: "{F2}",
       AOE: "{F4}",
@@ -27,10 +34,16 @@ class App {
    static cooldowns := {
       click: 0,
       exhaust: 250,
-      items: 100,
+      items: 125,
    }
 
    static callStack := {
       healingPlayer: false
+   }
+
+   static isClientActive := WinActive(Paths.tibia.client.process)
+
+   static handleChangeOption(option, value) {
+      this.options.%option% := value
    }
 }

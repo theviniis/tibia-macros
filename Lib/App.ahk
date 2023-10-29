@@ -33,15 +33,17 @@ class App {
 
    static cooldowns := {
       click: 0,
-      exhaust: 250,
       items: 25,
+      exhaust: 250,
+      support: 250,
+      rune: 500,
    }
 
    static callStack := {
-      healingPlayer: false
+      healingPlayer: '',
+      isCursorOnActiveArea: true,
+      exhaustRune: false,
    }
-
-   static isClientActive := WinActive(Paths.tibia.client.process)
 
    static handleChangeOption(option, value) {
       this.options.%option% := value

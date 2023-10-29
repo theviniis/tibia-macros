@@ -21,3 +21,17 @@ isMouseInArea(x1, y1, x2, y2) {
 getParsedHotkey(hotkey) {
    return "{" . hotkey . "}"
 }
+
+isClientActive() {
+   isClientActive := WinActive(Paths.tibia.client.process)
+   return !!isClientActive
+}
+
+
+stringToNumber(string) {
+   NumValue := 0
+   if (string != "") {
+      NumValue := Number(string)
+   }
+   return NumValue
+}

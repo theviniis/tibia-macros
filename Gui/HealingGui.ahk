@@ -28,9 +28,8 @@ UpdateOSD() {
 SetTimer checkShouldShowGui, CHECK_USD_CD
 
 checkShouldShowGui() {
-   isClientActive := Paths.tibia.client.process
    isGuiEnabled := App.options.showGui
-   if WinActive(isGuiEnabled and isClientActive)
+   if WinActive(isGuiEnabled and isClientActive())
       HealingGui.Show("x878 y450 NoActivate")
    else
       HealingGui.Hide()

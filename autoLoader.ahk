@@ -4,13 +4,12 @@ DetectHiddenWindows(true)
 #Include "<env>"
 #Include "Paths.ahk"
 #NoTrayIcon
+#Include "./Utils/index.ahk"
 
-
-SetTimer CheckWindowAndProcess, 1000
+SetTimer CheckWindowAndProcess, 100
 
 CheckWindowAndProcess() {
-   isClientOpen := WinExist(Paths.tibia.client.process)
    isMacroOpen := WinExist(Paths.tibia.macro.path)
-   if (isClientOpen and !isMacroOpen)
+   if (isClientActive() and !isMacroOpen)
       Run(Paths.tibia.macro.path)
 }

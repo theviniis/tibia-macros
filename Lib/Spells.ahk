@@ -1,15 +1,15 @@
 class Spells extends App {
    static send(spell) {
       sendBlind(spell)
-      Sleep(this.cooldowns.exhaust)
+      Sleep(super.cooldowns.exhaust)
    }
 
    static debuff(spell) {
-      isCursorOnMobArea := isMouseInArea(368, 24, 1477, 836)
-      shouldBindScroll := this.options.bindScroll
-      if (shouldBindScroll and isCursorOnMobArea) {
+      shouldBindScroll := super.options.bindScroll
+      isCursorOnCenter := super.callStack.isCursorOnActiveArea
+      if (shouldBindScroll and isCursorOnCenter) {
          sendBlind(spell)
-         Sleep(this.cooldowns.exhaust)
+         Sleep(super.cooldowns.exhaust)
       } else {
          parsedHotkey := getParsedHotkey(A_ThisHotkey)
          SendInput(parsedHotkey)

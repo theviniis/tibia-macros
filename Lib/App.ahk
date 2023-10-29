@@ -34,7 +34,7 @@ class App {
    static cooldowns := {
       click: 0,
       exhaust: 250,
-      items: 125,
+      items: 25,
    }
 
    static callStack := {

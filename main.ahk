@@ -20,6 +20,7 @@ WheelUp:: Spells.debuff(App.hotkeys.BUFF)
 ; ================== Item Toggle ================== ;
 $1:: {
    Item.toggle("ammu")
+   sleep 75
    Item.toggle("ring")
 }
 

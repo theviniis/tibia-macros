@@ -1,14 +1,14 @@
 class Spells extends App {
    static send(spell) {
-      sendBlind(spell)
+      SendInput(spell)
       Sleep(super.cooldowns.exhaust)
    }
 
-   static debuff(spell) {
+   static bindedOnCenter(spell) {
       shouldBindScroll := super.options.bindScroll
       isCursorOnCenter := super.callStack.isCursorOnActiveArea
       if (shouldBindScroll and isCursorOnCenter) {
-         sendBlind(spell)
+         SendInput(spell)
          Sleep(super.cooldowns.exhaust)
       } else {
          parsedHotkey := getParsedHotkey(A_ThisHotkey)

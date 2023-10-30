@@ -16,6 +16,8 @@ class App {
       ammu2: "+{1}",
       ring1: "^{F14}",
       ring2: "^{F13}",
+      utamo: "{F14}",
+      SSA: "^{F1}",
    }
 
    static partyListPlayerGap := 22
@@ -32,7 +34,7 @@ class App {
    }
 
    static cooldowns := {
-      click: 10,
+      click: 5,
       items: 25,
       exhaust: 250,
       support: 250,

@@ -1,16 +1,16 @@
 class Rune extends App {
-   static send(rune, cooldown := super.cooldowns.rune) {
+   static send(rune, cooldown := this.cooldowns.rune) {
       SendInput(rune)
-      Sleep(super.cooldowns.click)
+      Sleep(this.cooldowns.click)
       Click()
       Sleep(cooldown)
    }
 
-   static sendOnTarget(rune, target, cooldown := super.cooldowns.rune) {
+   static sendOnTarget(rune, target, cooldown := this.cooldowns.rune) {
       MouseGetPos(&mX, &mY)
       SendInput(rune)
-      Sleep(super.cooldowns.click)
-      MouseClick("left", super.partyList.%target%.x, super.partyList.%target%.y)
+      Sleep(this.cooldowns.click)
+      MouseClick("left", this.partyList.%target%.x, this.partyList.%target%.y)
       MouseMove(mX, mY)
       Sleep(cooldown)
    }

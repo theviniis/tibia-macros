@@ -32,7 +32,7 @@ class App {
    }
 
    static cooldowns := {
-      click: 0,
+      click: 10,
       items: 25,
       exhaust: 250,
       support: 250,

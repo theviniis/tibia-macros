@@ -22,6 +22,7 @@ $1:: {
    Item.toggle("ammu")
    sleep 75
    Item.toggle("ring")
+   return
 }
 
 ; ================== OTHERS ================== ;

@@ -23,7 +23,6 @@ WheelUp:: Spells.bindedOnCenter(App.hotkeys.utamo)
 
 $1:: {
    Item.equip(App.hotkeys.SSA) ; SSA Bind
-
    ;  Item.toggleAmmuAndRing()
 }
 

@@ -34,7 +34,6 @@ class Item extends App {
 
    static toggleAmmuAndRing() {
       this.toggle("ammu")
-      Sleep(100)
       this.toggle("ring")
    }
 }

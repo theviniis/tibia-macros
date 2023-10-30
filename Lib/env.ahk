@@ -1,8 +1,4 @@
 #HotIf WinActive(Paths.tibia.client.process)
-iconPath := "./Asset/icon.png"
-if FileExist(iconPath) {
-   TraySetIcon(iconPath)
-}
 #SingleInstance Force
 SetWorkingDir A_ScriptDir
 A_HotkeyInterval := 99999999
@@ -17,3 +13,8 @@ SetWinDelay(-1)
 CoordMode("Mouse", "Screen")
 CoordMode("Pixel", "Client")
 ListLines 0
+
+iconPath := "./Asset/icon.png"
+if FileExist(iconPath) {
+   TraySetIcon(iconPath)
+}

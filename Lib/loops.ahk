@@ -1,6 +1,6 @@
 Persistent
 
-CHECK_OPTIONS_CD := 10
+CHECK_OPTIONS_CD := 100
 
 checkOptions() {
    isScrollActive := GetKeyState("ScrollLock", "T")

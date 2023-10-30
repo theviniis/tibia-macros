@@ -35,7 +35,7 @@ class App {
 
    static cooldowns := {
       click: 5,
-      items: 25,
+      items: 100,
       exhaust: 250,
       support: 250,
       rune: 250,

@@ -12,8 +12,6 @@ $F2:: UH.send("EK")
 
 $F3:: UH.send("RP")
 
-; $+F2:: UH.send("RP")
-
 ; ================== BindSpells ================== ;
 WheelDown:: Spells.bindedOnCenter(App.hotkeys.DEBUFF)
 
@@ -26,10 +24,7 @@ WheelUp:: Spells.bindedOnCenter(App.hotkeys.utamo)
 $1:: {
    Item.equip(App.hotkeys.SSA) ; SSA Bind
 
-   ;  Item.toggle("ammu")
-   ;  sleep 75
-   ;  Item.toggle("ring")
-   ;  return
+   ;  Item.toggleAmmuAndRing()
 }
 
 ; ================== OTHERS ================== ;

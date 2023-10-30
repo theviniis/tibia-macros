@@ -2,23 +2,23 @@ class Item extends App {
    static state := {
       ammu: {
          hotkeys: {
-            1: this.hotkeys.ammu1,
-            2: this.hotkeys.ammu2
+            1: super.hotkeys.ammu1,
+            2: super.hotkeys.ammu2
          },
          isActive: false
       },
       ring: {
          hotkeys: {
-            1: this.hotkeys.ring1,
-            2: this.hotkeys.ring2
+            1: super.hotkeys.ring1,
+            2: super.hotkeys.ring2
          },
          isActive: false
       },
    }
 
-   static equip(item) {
+   static equip(item, cooldown := this.cooldowns.items) {
       Send(item)
-      Sleep(this.cooldowns.items)
+      Sleep(cooldown)
    }
 
    static toggle(item) {
@@ -30,5 +30,11 @@ class Item extends App {
          else
             this.equip(this.state.%item%.hotkeys.2)
       }
+   }
+
+   static toggleAmmuAndRing() {
+      this.toggle("ammu")
+      Sleep(100)
+      this.toggle("ring")
    }
 }

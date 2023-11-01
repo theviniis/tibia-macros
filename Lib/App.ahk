@@ -18,6 +18,7 @@ class App {
       ring2: "^{F13}",
       utamo: "{F14}",
       SSA: "^{F1}",
+      MR: "{r}"
    }
 
    static partyListPlayerGap := 22

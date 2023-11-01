@@ -1,3 +1,4 @@
+#Include "../Paths.ahk"
 #HotIf WinActive(Paths.tibia.client.process)
 #SingleInstance Force
 SetWorkingDir A_ScriptDir

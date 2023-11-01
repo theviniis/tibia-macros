@@ -21,10 +21,9 @@ WheelUp:: Spells.bindedOnCenter(App.hotkeys.utamo)
 
 ; ================== Item Toggle ================== ;
 
-$1:: {
-   Item.equip(App.hotkeys.SSA) ; SSA Bind
-   ;  Item.toggleAmmuAndRing()
-}
+; $1:: Item.equip(App.hotkeys.SSA)
+
+$1:: Item.toggleAmmuAndRing()
 
 ; ================== OTHERS ================== ;
 $!^Escape:: ExitApp()

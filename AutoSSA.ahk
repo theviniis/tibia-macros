@@ -9,18 +9,16 @@ MightRing := "|<>*93$7.ztsRan3zk"
 ; MightRing := "|<>*57$6.znlhnzU" ; Empty Ring Value
 
 checkAmmu() {
-   if (WinActive(Paths.tibia.client.process)) {
-      if not (ok := FindText(&X, &Y, 2905, 716, 2923, 734, 0, 0, SSA)) {
+   if (WinActive(Paths.tibia.client.process)
+      and not FindText(&X, &Y, 2905, 716, 2923, 734, 0, 0, SSA)) {
          Send(App.hotkeys.SSA)
-      }
    }
 }
 
 checkRing() {
-   if (WinActive(Paths.tibia.client.process)) {
-      if not (ok := FindText(&X, &Y, 2909, 763, 2919, 771, 0, 0, MightRing)) {
+   if (WinActive(Paths.tibia.client.process)
+      and not FindText(&X, &Y, 2909, 763, 2919, 771, 0, 0, MightRing)) {
          Send(App.hotkeys.MR)
-      }
    }
 }
 

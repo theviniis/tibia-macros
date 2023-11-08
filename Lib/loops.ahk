@@ -4,7 +4,7 @@ CHECK_OPTIONS_CD := 100
 
 checkOptions() {
    isScrollActive := GetKeyState("ScrollLock", "T")
-   if (!isClientActive() or isScrollActive) {
+   if (isScrollActive) {
       Suspend(1)
    }
    else {

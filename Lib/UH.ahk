@@ -20,7 +20,7 @@ class UH extends App {
       for player in this.partyList.OwnProps() {
          this.setPosition(player, {
             x: mX,
-            y: mY + (this.partyListPlayerGap * A_Index),
+            y: mY + (this.partyListPlayerGap * (A_Index - 1)),
          })
       }
       Alert.positions()

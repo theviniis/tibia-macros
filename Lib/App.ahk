@@ -39,7 +39,7 @@ class App {
       items: 100,
       exhaust: 250,
       support: 250,
-      rune: 250,
+      rune: 500,
    }
 
    static callStack := {

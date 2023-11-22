@@ -1,7 +1,22 @@
 class UH extends App {
    static send(target) {
       this.callStack.healingPlayer := target
-      Rune.sendOnTarget(this.hotkeys.UH, target)
+
+      mX := 916
+      mY := 429
+
+      if not (isMouseInArea(176, 408, 348, 492)) {
+         MouseGetPos(&mX, &mY)
+         mX := mX
+         mY := mY
+      }
+
+      SendInput(super.hotkeys.UH)
+      Sleep(this.cooldowns.click)
+      MouseClick("left", this.partyList.%target%.x, this.partyList.%target%.y)
+      MouseMove(mX, mY)
+      Sleep(super.cooldowns.rune)
+
       this.callStack.healingPlayer := false
    }
 

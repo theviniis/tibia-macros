@@ -1,23 +1,22 @@
+#Include <App>
+#Include <../Utils/utils>
+
 class UH extends App {
    static send(target) {
-      this.callStack.healingPlayer := target
+      posX := super.cursorAreas.active.middleX
+      posY := super.cursorAreas.active.middleY
 
-      mX := 916
-      mY := 429
-
-      if not (isMouseInArea(176, 408, 348, 492)) {
+      if not (super.callStack.isCursorOnPartyListArea) {
          MouseGetPos(&mX, &mY)
-         mX := mX
-         mY := mY
+         posX := mX
+         posY := mY
       }
 
       SendInput(super.hotkeys.UH)
       Sleep(this.cooldowns.click)
-      MouseClick("left", this.partyList.%target%.x, this.partyList.%target%.y)
-      MouseMove(mX, mY)
+      MouseClick("left", target.x, target.y)
+      MouseMove(posX, posY)
       Sleep(super.cooldowns.rune)
-
-      this.callStack.healingPlayer := false
    }
 
    static setPosition(player, newPosition := false) {

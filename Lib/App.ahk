@@ -35,18 +35,37 @@ class App {
    }
 
    static cooldowns := {
-      click: 5,
+      click: 2,
       items: 100,
       exhaust: 250,
       support: 250,
-      rune: 500,
+      rune: 250,
    }
 
    static callStack := {
       healingPlayer: '',
-      isCursorOnActiveArea: true,
       exhaustRune: false,
+      isCursorOnActiveArea: true,
+      isCursorOnPartyListArea: false,
    }
+
+   static cursorAreas := {
+      active: {
+         x1: 372,
+         x2: 1472,
+         y1: 26,
+         y2: 834,
+         middleX: (372 + 1472) / 2,
+         middleY: (26 + 834) / 2,
+      },
+      party: {
+         x1: 176,
+         x2: 348,
+         y1: 408,
+         y2: 488
+      }
+   }
+
 
    static handleChangeOption(option, value) {
       this.options.%option% := value

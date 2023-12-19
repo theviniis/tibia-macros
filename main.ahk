@@ -29,7 +29,7 @@ WheelUp:: Spells.bindedOnCenter(App.hotkeys.utamo)
 
 ; $1:: Item.equip(App.hotkeys.SSA)
 
-$1:: Item.toggleAmmuAndRing()
+; $1:: Item.toggleAmmuAndRing()
 
 ; ================== OTHERS ================== ;
 $!^Escape:: ExitApp()

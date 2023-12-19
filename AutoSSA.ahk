@@ -9,8 +9,9 @@ MightRing := "|<>*93$7.ztsRan3zk"
 ; MightRing := "|<>*57$6.znlhnzU" ; Empty Ring Value
 
 checkAmmu() {
+   isScrollActive := !GetKeyState("ScrollLock", "T")
    if (
-      GetKeyState("CapsLock", "T")
+      isScrollActive
       and WinActive(Paths.tibia.client.process)
       and not FindText(&X, &Y, 2905, 716, 2923, 734, 0, 0, SSA)
    ) {
@@ -19,8 +20,9 @@ checkAmmu() {
 }
 
 checkRing() {
+   isScrollActive := !GetKeyState("ScrollLock", "T")
    if (
-      GetKeyState("CapsLock", "T")
+      isScrollActive
       and WinActive(Paths.tibia.client.process)
       and not FindText(&X, &Y, 2909, 763, 2919, 771, 0, 0, MightRing)
    ) {
